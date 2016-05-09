@@ -1,0 +1,49 @@
+#logo-img {
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+	padding-top: 30px;
+}
+.navbar-brand h1{
+	color: #005375;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { /* Kosher cert */
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+  vertical-align: middle;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #005375;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #d7df21;
+  border-radius: 5px;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+#phone div {
+	color: #005375;
+	text-align: right;
+	padding-right: 15px;
+}
