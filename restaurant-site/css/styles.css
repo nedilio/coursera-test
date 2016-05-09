@@ -1,3 +1,10 @@
+body {
+  font-size: 16px;
+/*  color: #fff;*/
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+
 #logo-img {
   width: 150px;
   height: 150px;
@@ -46,4 +53,61 @@
 	color: #005375;
 	text-align: right;
 	padding-right: 15px;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #005375;
+	background-color: #d7df21;
+}
+
+.navbar-header button.navbar-toggle {
+	clear: both;
+	margin-top: -25px;
+}
+/*END HEADER*/
+/*Large*/
+@media (min-width: 1200px) {
+	
+}
+
+/*medium*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	#logo-img {
+	  width: 100px;
+	  height: 100px;
+	  margin: 5px 5px 5px 0;
+	}
+}
+
+/*small*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/*Xtra small*/
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding-top: 10px;
+		height: 80px;
+	}
+	.navbar-brand h1{
+		padding-top: 10px;
+		font-size: 5vw;
+
+	}
+	.navbar-brand a:hover, .navbar-brand a:focus {
+	  text-decoration: none;
+	}
+	.navbar-brand p { /* Kosher cert */
+	  font-size: .6em;
+	  margin-top: 12px;
+	}
+
+	#collapsable-nav a {
+		font-size: 1.2em;
+	}
+	#collapsable-nav a span{
+		font-size: 1em;
+		margin-right: 5px;
+	}
 }
