@@ -69,13 +69,39 @@ body {
 	margin-top: -25px;
 }
 /*END HEADER*/
+/*home page*/
+.container .jumbotron {
+	box-shadow: 0 0 50px #3F0C1F;
+	border: 2px solid #3F0C1F;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #3F0C1F;
+	overflow: hidden;
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+	background: url(../images/DSC_0402.jpg) no-repeat;
+	background-position: center;
+}
+
+#specials-tile {
+	background: url(../images/DSC_0657.jpg) no-repeat;
+	background-position: center;
+}
+
 /*Large*/
 @media (min-width: 1200px) {
 	.jumbotron {
 		background: url(../images/polo1200.jpg) no-repeat;
 		height: 675px;
-		box-shadow: 0 0 50px #3F0C1F;
-		border: 2px solid #3F0C1F;
 	}
 }
 
@@ -89,23 +115,19 @@ body {
 	.jumbotron {
 		background: url(../images/polo992.jpg) no-repeat;
 		height: 558px;
-		box-shadow: 0 0 50px #3F0C1F;
-		border: 2px solid #3F0C1F;
 	}
 }
 
 /*small*/
 @media (min-width: 768px) and (max-width: 991px) {
 	#logo-img {
-	  width: 70px;
-	  height: 70px;
+	  width: 100px;
+	  height: 100px;
 	  margin: 5px 5px 5px 0;
 	}
 	.jumbotron {
 		background: url(../images/polo768.jpg) no-repeat;
 		height: 432px;
-		box-shadow: 0 0 50px #3F0C1F;
-		border: 2px solid #3F0C1F;
 	}
 }
 
@@ -155,5 +177,9 @@ body {
 	    font-size: .7em;
 	    letter-spacing: .1em;
 	    text-transform: uppercase;
+	}
+	.container .jumbotron { /*adapt image to jumbotron*/
+		margin-top: 30px;
+		padding: 0;
 	}
 }
