@@ -96,6 +96,11 @@ body {
 
 /*small*/
 @media (min-width: 768px) and (max-width: 991px) {
+	#logo-img {
+	  width: 70px;
+	  height: 70px;
+	  margin: 5px 5px 5px 0;
+	}
 	.jumbotron {
 		background: url(../images/polo768.jpg) no-repeat;
 		height: 432px;
@@ -106,6 +111,11 @@ body {
 
 /*Xtra small*/
 @media (max-width: 767px) {
+	#logo-img {
+	  width: 70px;
+	  height: 70px;
+	  margin: 5px 5px 5px 5px;
+	}
 	.navbar-brand {
 		padding-top: 10px;
 		height: 80px;
