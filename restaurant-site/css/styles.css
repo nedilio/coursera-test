@@ -103,7 +103,9 @@ body {
 	bottom: 0px;
 	text-align: center;
 	width: 100%;
+	font-size: 1.6em;
     text-align: center;
+    text-transform: uppercase;
     background-color: #000;
     opacity: 0.8;
 
@@ -183,15 +185,25 @@ body {
 	    background-color: #d7df21;
 	    color: #005375;
 	    text-align: center;
+	    border-radius: 5px;
 	}
 	  #xs-deliver {
 	    margin-top: 5px;
-	    font-size: .7em;
+	    font-size: 1.2em;
 	    letter-spacing: .1em;
 	    text-transform: uppercase;
+	    background-color: #d7df21;
+	    width: 200px;
+	    margin: 5px auto 5px;
+	    border-radius: 5px;
 	}
 	.container .jumbotron { /*adapt image to jumbotron*/
 		margin-top: 30px;
 		padding: 0;
+	}
+
+	#menu-tile, #specials-tile {
+		width: 360px;
+		margin: 0 auto 15px;
 	}
 }
