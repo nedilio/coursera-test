@@ -1,6 +1,6 @@
 body {
   font-size: 16px;
-/*  color: #fff;*/
+  color: #005375;
   background-color: #61122f;
   font-family: 'Oxygen', sans-serif;
 }
@@ -95,6 +95,18 @@ body {
 #specials-tile {
 	background: url(../images/DSC_0657.jpg) no-repeat;
 	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+	color: #005375;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	width: 100%;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.8;
+
 }
 
 /*Large*/
