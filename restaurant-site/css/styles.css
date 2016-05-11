@@ -1,16 +1,14 @@
 body {
   font-size: 16px;
   color: #005375;
-  background-color: #61122f;
+  background-color: #79C0CC;
   font-family: 'Oxygen', sans-serif;
 }
-
 #logo-img {
   width: 150px;
   height: 150px;
   margin: 10px 15px 10px 0;
 }
-
 .navbar-brand {
 	padding-top: 30px;
 }
@@ -34,7 +32,6 @@ body {
   margin-top: 15px;
   vertical-align: middle;
 }
-
 #nav-list {
   margin-top: 10px;
 }
@@ -54,16 +51,13 @@ body {
 	text-align: right;
 	padding-right: 15px;
 }
-
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
 	border: 1px solid #005375;
 	background-color: #d7df21;
 }
-
 .navbar-header button.navbar-toggle:focus {
 	background-color: #d7df21;
 }
-
 .navbar-header button.navbar-toggle {
 	clear: both;
 	margin-top: -25px;
@@ -71,32 +65,28 @@ body {
 /*END HEADER*/
 /*home page*/
 .container .jumbotron {
-	box-shadow: 0 0 50px #3F0C1F;
-	border: 2px solid #3F0C1F;
+	box-shadow: 0 0 50px #2980b9;
+	border: 2px solid #2980b9;
 }
-
 #menu-tile, #specials-tile, #map-tile {
 	height: 250px;
 	width: 100%;
 	margin-bottom: 15px;
 	position: relative;
-	border: 2px solid #3F0C1F;
+	border: 2px solid #2980b9;
 	overflow: hidden;
 }
 #menu-tile:hover, #specials-tile:hover, #map-tile:hover {
 	box-shadow: 0 1px 5px 1px #cccccc;
 }
-
 #menu-tile {
 	background: url(../images/DSC_0402.jpg) no-repeat;
 	background-position: center;
 }
-
 #specials-tile {
 	background: url(../images/DSC_0657.jpg) no-repeat;
 	background-position: center;
 }
-
 #menu-tile span, #specials-tile span, #map-tile span {
 	color: #005375;
 	position: absolute;
@@ -108,7 +98,6 @@ body {
     text-transform: uppercase;
     background-color: #000;
     opacity: 0.8;
-
 }
 /*end home page*/
 /*footer*/
@@ -117,24 +106,47 @@ body {
 	padding-top: 35px;
 	padding-bottom: 30px;
 	background-color: #d7df21
-
 }
-
 .titulofooter {
 	font-size: 1.2em;
 	line-height: 2;
 	font-style: bold;
 }
-
 .iconitos {
 	font-size: 20px;
 }
-
 .link-social, .link-social:hover, .link-social:active, .link-social:visited {
 	text-decoration: none;
 	color: #005375;
 }
 /*endfooter*/
+/*menucategories*/
+#menu-cat-tile {
+	height: 200px;
+	width: 200px;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #2980b9;
+	overflow: hidden;
+	background: url(../images/DSC_0402.jpg) no-repeat;
+	background-position: center;
+}
+#menu-cat-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-cat-tile span {
+	color: #005375;
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	width: 100%;
+	font-size: 1.6em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #000;
+    opacity: 0.8;
+}
+/*end menu cat*/
 /*Large*/
 @media (min-width: 1200px) {
 	.jumbotron {
@@ -142,7 +154,6 @@ body {
 		height: 675px;
 	}
 }
-
 /*medium*/
 @media (min-width: 992px) and (max-width: 1199px) {
 	#logo-img {
@@ -155,7 +166,6 @@ body {
 		height: 558px;
 	}
 }
-
 /*small*/
 @media (min-width: 768px) and (max-width: 991px) {
 	#logo-img {
@@ -168,7 +178,6 @@ body {
 		height: 432px;
 	}
 }
-
 /*Xtra small*/
 @media (max-width: 767px) {
 	#logo-img {
@@ -183,7 +192,6 @@ body {
 	.navbar-brand h1{
 		padding-top: 10px;
 		font-size: 5vw;
-
 	}
 	.navbar-brand a:hover, .navbar-brand a:focus {
 	  text-decoration: none;
@@ -192,7 +200,6 @@ body {
 	  font-size: .6em;
 	  margin-top: 12px;
 	}
-
 	#collapsable-nav a {
 		font-size: 1.2em;
 	}
@@ -225,14 +232,22 @@ body {
 		margin-top: 30px;
 		padding: 0;
 	}
-
 	#menu-tile, #specials-tile {
 		width: 360px;
 		margin: 0 auto 15px;
 	}
-
 	hr {
 		border-top: 1px solid #005375;
 		width: 50%
+	}
+}
+/*superextrasmall devices*/
+@media (max-width: 480px) {
+	.col-xxs-12 {
+		position: relative;
+		float: left;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 100%;
 	}
 }
