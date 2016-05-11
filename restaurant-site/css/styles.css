@@ -125,6 +125,15 @@ body {
 	line-height: 2;
 	font-style: bold;
 }
+
+.iconitos {
+	font-size: 20px;
+}
+
+.link-social, .link-social:hover, .link-social:active, .link-social:visited {
+	text-decoration: none;
+	color: #005375;
+}
 /*endfooter*/
 /*Large*/
 @media (min-width: 1200px) {
@@ -220,5 +229,10 @@ body {
 	#menu-tile, #specials-tile {
 		width: 360px;
 		margin: 0 auto 15px;
+	}
+
+	hr {
+		border-top: 1px solid #005375;
+		width: 50%
 	}
 }
