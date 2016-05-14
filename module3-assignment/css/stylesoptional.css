@@ -1,0 +1,44 @@
+.navbar-brand {
+	padding-top: 15px;
+}
+.navbar-brand h1{
+	color: #005375;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .75;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+.navbar-nav>li>a {
+    box-sizing:border-box;
+    border: 1px solid black; 
+}
+h1{
+	margin-bottom: 30px;
+}
+.foodie{
+	box-sizing:border-box;
+	border: 1px solid black;
+	background-color: #B6B6B6;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.foodie>p {
+	clear: both;
+}
+.chicken {
+	background-color:#FF9A6C ;
+}
+.beef {
+	background-color:#FF6150 ;
+}
+.sushi {
+	background-color:#FFFFA4 ;
+}
