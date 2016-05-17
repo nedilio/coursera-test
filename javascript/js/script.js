@@ -90,27 +90,44 @@
 // console.log("la suma de los numeros del 1 al 9 es "+sum);
 
 // numeros primos
-function esPrimo(a) {
-var contador=0;
-for (var i = a-1; i > 1; i--) {
-	console.log("i= "+i);
-	var residuo=a%i;
-	// console.log("residuo de "+a+" entre "+i+" da="+residuo);
-	if (residuo==0) {
-		contador=contador=1;
-	}
+// function esPrimo(a) {
+// var contador=0;
+// for (var i = a-1; i > 1; i--) {
+// 	// console.log("i= "+i);
+// 	var residuo=a%i;
+// 	// console.log("residuo de "+a+" entre "+i+" da="+residuo);
+// 	if (residuo==0) {
+// 		contador=contador=1;
+// 		console.log("es divisible entre: "+i)
+// 	}
+// };
+
+// if (contador==0) {
+// 	console.log("es primo");
+// }
+// else {
+// 	console.log("no es primo");
+// }
+// }
+//  esPrimo(1049);
+
+//  var x = 10;
+// if ( (null) || (console.log("Hello")) || x > 5 ) {
+//   console.log("Hello");
+// }
+// Por referencia
+// var a = {x:7};
+// var b = a;
+// b.x=5;
+// console.log(a);
+
+
+function Circle(radius){
+	this.radius = radius;
+	this.area =
+		function () {
+			return Math.PI * Math.pow(this.radius,2);
+		};
 };
-
-if (contador==0) {
-	console.log("es primo");
-}
-else {
-	console.log("no es primo");
-}
-}
- esPrimo(5);
-
- var x = 10;
-if ( (null) || (console.log("Hello")) || x > 5 ) {
-  console.log("Hello");
-}
+var myCircle = new Circle(10);
+console.log(myCircle);
