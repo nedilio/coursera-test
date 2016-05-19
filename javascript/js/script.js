@@ -122,12 +122,21 @@
 // console.log(a);
 
 
-function Circle(radius){
-	this.radius = radius;
-	this.area =
-		function () {
-			return Math.PI * Math.pow(this.radius,2);
-		};
-};
-var myCircle = new Circle(10);
-console.log(myCircle);
+// function Circle(radius){
+// 	this.radius = radius;
+// 	this.area =
+// 		function () {
+// 			return Math.PI * Math.pow(this.radius,2);
+// 		};
+// };
+// var myCircle = new Circle(10);
+// console.log(myCircle);
+
+// DOM
+// console.log(document.getElementById("title"));
+
+function sayHello() {
+	console.log(
+		document.getElementById("name").value
+	);
+}
