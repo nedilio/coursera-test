@@ -28,7 +28,7 @@
 			            </p>
 	         		 </div>
 
-	         		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+	         		<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
 			            <span class="sr-only">Toggle navigation</span>
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
@@ -67,36 +67,8 @@
 	</div>
 	<div id="xs-deliver" class="text-center visible-xs">Delivery</div>
 
-	<section class="container">
-		<div class="jumbotron">
-			<img src="images/polo768.jpg" alt="Polo Bistro Rest" class="img-responsive visible-xs">
-		</div>
+	<section id="main-content" class="container"></section>
 
-		<div id="home-tile" class="row">
-			<article class="col-md-4 col-sm-6 col-xs-12">
-				<a href="menu.html">
-					<div id="menu-tile">
-						<span>Menu</span>
-					</div>
-				</a>
-			</article>
-			<article class="col-md-4 col-sm-6 col-xs-12">
-				<a href="#">
-					<div id="specials-tile">
-						<span>Especiales</span>
-					</div>
-				</a>
-			</article>
-			<article class="col-md-4 col-sm-12 col-xs-12">
-				<a href="https://goo.gl/maps/PG1xGfMygfu" target="_blank">
-					<div id="map-tile">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.465960017005!2d-66.99525768590078!3d10.384516992588214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2af4ac26d069dd%3A0xd21d0466d1e3ad40!2sPolo+Bistr%C3%B3!5e0!3m2!1sen!2sve!4v1462851866182" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-						<span>map</span>
-					</div>
-				</a>
-			</article>
-		</div>
-	</section>
 
 	<footer class="panel-footer">
 		<div class="container">
@@ -132,6 +104,7 @@
 
   <script src="js/jquery-2.2.3.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
 
 </body>
