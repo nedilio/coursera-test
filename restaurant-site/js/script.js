@@ -15,7 +15,7 @@ $(function(){
 var dc = {};
 
 var homeHtml = "snippets/home-snippet.html";
-
+var categoryHtml = "snippets/menu-snippet.html";
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
@@ -42,6 +42,18 @@ $ajaxUtils.sendGetRequest(
   }, 
   false);
 });
+
+// Load the menu categories view
+dc.loadMenuCategories = function () {
+  showLoading("#main-content");
+  $ajaxUtils.sendGetRequest(
+  categoryHtml, 
+  function (responseText) {
+    document.querySelector("#main-content")
+      .innerHTML = responseText;
+  }, 
+  false);
+};
 
 
 global.$dc = dc;
