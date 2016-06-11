@@ -1,0 +1,11 @@
+body {
+	background-color: #171717;
+}
+
+#contenido {
+	padding-top: 30px;
+}
+
+.slider .indicators .indicator-item.active{
+	background-color: #202020;
+}
