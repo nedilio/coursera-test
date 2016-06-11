@@ -2,10 +2,14 @@ body {
 	background-color: #171717;
 }
 
-#contenido {
+#prueba, #contenido {
 	padding-top: 30px;
 }
 
 .slider .indicators .indicator-item.active{
 	background-color: #202020;
+}
+
+.iconito {
+	margin-top: 4px;
 }
