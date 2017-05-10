@@ -1,3 +1,6 @@
+(function () {
+'use strict';
+
 angular.module("ShoppingListCHeckOff", [])
     .controller("ToBuyController", ToBuyController)
     .controller("AlreadyBoughtController", AlreadyBoughtController)
@@ -27,7 +30,6 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 function ShoppingListCheckOffService() {
     var service = this;
 
-
     var itemsTobuy = [
 //        {
 //            name: "leche",
@@ -41,19 +43,22 @@ function ShoppingListCheckOffService() {
                 name: itemName,
                 quantity: quantity
             };
-    console.log(item);
             itemsTobuy.push(item);
-        console.log(itemsTobuy);
     };
+
     service.removeItem = function (itemIndex) {
         var itemtobuy = itemsTobuy[itemIndex];
         boughtItems.push(itemtobuy);
         itemsTobuy.splice(itemIndex, 1);
     };
+
     service.getItemsToBuy = function () {
         return itemsTobuy;
     };
+
     service.getItemsBought = function () {
         return boughtItems;
     };
 };
+
+})();
