@@ -31,10 +31,26 @@ function ShoppingListCheckOffService() {
     var service = this;
 
     var itemsTobuy = [
-//        {
-//            name: "leche",
-//            quantity: "2 potes"
-//        }
+       {
+           name: "milk",
+           quantity: 2
+       },
+       {
+       	name: "wine",
+       	quantity: 3
+       },
+       {
+       	name: "eggs",
+       	quantity: 6
+       },
+       {
+       	name: "coffee",
+       	quantity: 1
+       },
+       {
+       	name:"bread",
+       	quantity: 4
+       }
     ];
     var boughtItems = [];
 
