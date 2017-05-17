@@ -22,6 +22,7 @@
         searchList.searchWord = function(keyword) {
         	console.log ('palabra clave a buscar: ' + keyword);
         	// console.log (searchList.items.menu_items);
+            searchList.validitems = [];
             for (var i = 0; i < searchList.items.menu_items.length; i++) {
                 var name = searchList.items.menu_items[i].name;
                 // console.log(name.toLowerCase().indexOf(keyword));
