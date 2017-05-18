@@ -24,17 +24,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <!-- found-items should be implemented as a component -->
+                <div ng-hide="list.found.length != 0">
+                    <h1>Nothing Found</h1>
+                </div>
 
-                <!--                <found-items></found-items>-->
                 <found-items items="list.found" on-remove="list.removeItem(index)"></found-items>
-                <!--
-                <ul>
-                    <li ng-repeat="item in list.validitems">
-                        {{ item.name + ": " + item.description}}
-                    </li>
-                </ul>
--->
-
             </div>
         </div>
     </div>

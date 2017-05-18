@@ -6,12 +6,6 @@
         .service('MenuSearchService', MenuSearchService)
         .directive('foundItems', FoundItems);
 
-    //    function FoundItems() {
-    //        var ddo = {
-    //            templateUrl: 'founditems.html'
-    //        }
-    //        return ddo;
-    //    }
     function FoundItems() {
         var ddo = {
             templateUrl: 'founditems.html',
@@ -33,15 +27,15 @@
     function NarrowItDownController(MenuSearchService) {
 
         var list = this;
-
-        //        var menuSearch = MenuSearchService;
-
+        //        list.word = undefined;
         list.items = function () {
             list.found = undefined;
+
             MenuSearchService.getMatchedMenuItems(list.word)
                 .then(function (result) {
                     list.found = result;
                     console.log(list.found);
+                    console.log(list.found.length);
                 })
                 .catch(function (error) {
                     console.log('server error1');
@@ -67,12 +61,16 @@
                     var allItems = result.data.menu_items;
                     //                return true;
                     //                    return console.log(keyword);
+//                    if (keyword = "") {
+//                        keyword = undefined
+//                    };
                     if (keyword !== undefined) {
                         keyword = keyword.toLowerCase();
                     }
                     var foundItems = [];
                     for (var i = 0; i < allItems.length; i++) {
-                        var name = allItems[i].name;
+                        //                        var name = allItems[i].name;
+                        var name = allItems[i].description;
                         if (name.toLowerCase().indexOf(keyword) !== -1) {
                             foundItems.push(allItems[i]);
                         }
