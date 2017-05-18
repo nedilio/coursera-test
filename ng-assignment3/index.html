@@ -38,13 +38,14 @@
                    <th>Name</th>
                    <th>Description</th>
                    <th>Price</th>
+                   <th>Remove</th>
                </thead>
                <tbody>
                    <tr ng-repeat="item in searchList.foundItems">
                        <td>{{item.name}}</td>
                        <td>{{item.description}}</td>
                        <td>{{item.price_large | currency}}</td>
-                       <td><button class="btn btn-danger" ng-click="searchList.removeItem">I don't want this</button></td>
+                       <td><button class="btn btn-danger" ng-click="searchList.removeItem($index)">I don't want this</button></td>
                    </tr>
                </tbody>
            </table>

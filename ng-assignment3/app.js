@@ -10,21 +10,24 @@
     function NarrowItDownController(MenuSearchService) {
 
         var searchList = this;
-//        var menuSearch = MenuSearchService;
+        //        var menuSearch = MenuSearchService;
 
         searchList.items = function () {
-searchList.foundItems = undefined;
-        MenuSearchService.getMatchedMenuItems(searchList.word)
-            .then(function(result){
-                searchList.foundItems = result;
-            console.log(searchList.foundItems);
-            })
-            .catch(function(error){
-                console.log('server error1');
-            });
+            searchList.foundItems = undefined;
+            MenuSearchService.getMatchedMenuItems(searchList.word)
+                .then(function (result) {
+                    searchList.foundItems = result;
+                    console.log(searchList.foundItems);
+                })
+                .catch(function (error) {
+                    console.log('server error1');
+                });
+        };
+        searchList.removeItem = function (index) {
+            searchList.foundItems.splice(index, 1);
         };
 
-    };
+    }; //end controller
 
     MenuSearchService.$injector = ['$http'];
 
