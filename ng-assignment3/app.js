@@ -33,6 +33,7 @@
     function NarrowItDownController(MenuSearchService) {
 
         var list = this;
+
         //        var menuSearch = MenuSearchService;
 
         list.items = function () {
@@ -40,7 +41,6 @@
             MenuSearchService.getMatchedMenuItems(list.word)
                 .then(function (result) {
                     list.found = result;
-                    //                    console.log(result);
                     console.log(list.found);
                 })
                 .catch(function (error) {
@@ -66,7 +66,10 @@
                     // process result and only keep items that match
                     var allItems = result.data.menu_items;
                     //                return true;
-                    //                    keyword = keyword.toLowerCase();
+                    //                    return console.log(keyword);
+                    if (keyword !== undefined) {
+                        keyword = keyword.toLowerCase();
+                    }
                     var foundItems = [];
                     for (var i = 0; i < allItems.length; i++) {
                         var name = allItems[i].name;
