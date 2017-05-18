@@ -10,21 +10,44 @@
 
 <body ng-controller="NarrowItDownController as searchList">
     <div class="container">
-        <h1>Narrow Down Your Chinese Menu Choice</h1>
-        <div class="form-group">
-            <input type="text" placeholder="search term" class="form-control" ng-model="word">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Narrow Down Your Chinese Menu Choice</h1>
+                <div class="form-group">
+                    <input type="text" placeholder="search term" class="form-control" ng-model="word">
+                </div>
+                <div class="form-group narrow-button">
+                    <button class="btn btn-primary" ng-click="searchList.searchWord(word)">Narrow It Down For Me!</button>
+                </div>
+            </div>
         </div>
-        <div class="form-group narrow-button">
-            <button class="btn btn-primary" ng-click="searchList.searchWord(word)">Narrow It Down For Me!</button>
-        </div>
-        <!-- found-items should be implemented as a component -->
-        <found-items found-items="...." on-remove="...."></found-items>
-        <div style="clear: both;">
-            <ul>
-                <li ng-repeat="item in searchList.validitems">
-                    {{ item.name }}
-                </li>
-            </ul>
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- found-items should be implemented as a component -->
+                <found-items found-items="...." on-remove="...."></found-items>
+<!--
+                <ul>
+                    <li ng-repeat="item in searchList.validitems">
+                        {{ item.name + ": " + item.description}}
+                    </li>
+                </ul>
+-->
+           <table class="table table-striped">
+               <caption>Retrieved Items</caption>
+               <thead>
+                   <th>Name</th>
+                   <th>Description</th>
+                   <th>Price</th>
+               </thead>
+               <tbody>
+                   <tr ng-repeat="item in searchList.validitems">
+                       <td>{{item.name}}</td>
+                       <td>{{item.description}}</td>
+                       <td>{{item.price_large | currency}}</td>
+                   </tr>
+               </tbody>
+           </table>
+            </div>
         </div>
     </div>
     <script src="angular.min.js"></script>
