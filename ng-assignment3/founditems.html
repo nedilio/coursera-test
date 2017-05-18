@@ -1,1 +1,17 @@
-<div>Hello World</div>
+<table class="table table-striped">
+    <caption>Retrieved Items</caption>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Remove</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in list.items">
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price_large | currency}}</td>
+            <td><button class="btn btn-danger" ng-click="list.onRemove({index:$index})">I don't want this</button></td>
+        </tr>
+    </tbody>
+</table>

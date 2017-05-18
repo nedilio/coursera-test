@@ -8,49 +8,33 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body ng-controller="NarrowItDownController as searchList">
+<body ng-controller="NarrowItDownController as list">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <h1>Narrow Down Your Chinese Menu Choice</h1>
                 <div class="form-group">
-                    <input type="text" placeholder="search term" class="form-control" ng-model="searchList.word">
+                    <input type="text" placeholder="search term" class="form-control" ng-model="list.word">
                 </div>
                 <div class="form-group narrow-button">
-                    <button class="btn btn-primary" ng-click="searchList.items()">Narrow It Down For Me!</button>
+                    <button class="btn btn-primary" ng-click="list.items()">Narrow It Down For Me!</button>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <!-- found-items should be implemented as a component -->
-                
-                <!-- <found-items found-items="...." on-remove="...."></found-items> -->
-                <found-items></found-items>
-<!--
+
+                <!--                <found-items></found-items>-->
+                <found-items items="list.found" on-remove="list.removeItem(index)"></found-items>
+                <!--
                 <ul>
-                    <li ng-repeat="item in searchList.validitems">
+                    <li ng-repeat="item in list.validitems">
                         {{ item.name + ": " + item.description}}
                     </li>
                 </ul>
 -->
-           <table class="table table-striped">
-               <caption>Retrieved Items</caption>
-               <thead>
-                   <th>Name</th>
-                   <th>Description</th>
-                   <th>Price</th>
-                   <th>Remove</th>
-               </thead>
-               <tbody>
-                   <tr ng-repeat="item in searchList.foundItems">
-                       <td>{{item.name}}</td>
-                       <td>{{item.description}}</td>
-                       <td>{{item.price_large | currency}}</td>
-                       <td><button class="btn btn-danger" ng-click="searchList.removeItem($index)">I don't want this</button></td>
-                   </tr>
-               </tbody>
-           </table>
+
             </div>
         </div>
     </div>
