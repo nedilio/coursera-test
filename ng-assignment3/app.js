@@ -5,58 +5,53 @@
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService);
 
-    NarrowItDownController.$injector = ['MenuSearchService', '$scope'];
+    NarrowItDownController.$injector = ['MenuSearchService'];
 
     function NarrowItDownController(MenuSearchService) {
 
         var searchList = this;
-        searchList.validitems = [];
-        var promise = MenuSearchService.getMatchedMenuItems();
-        promise.then(function (response) {
-                searchList.items = response.data;
+//        var menuSearch = MenuSearchService;
+
+        searchList.items = function () {
+searchList.foundItems = undefined;
+        MenuSearchService.getMatchedMenuItems(searchList.word)
+            .then(function(result){
+                searchList.foundItems = result;
+            console.log(searchList.foundItems);
             })
-            .catch(function (error) {
-                console.log("Something went terribly wrong.");
+            .catch(function(error){
+                console.log('server error1');
             });
-
-        searchList.searchWord = function (keyword) {
-            keyword = keyword.toLowerCase();
-            console.log('palabra clave a buscar: ' + keyword);
-            // console.log (searchList.items.menu_items);
-            searchList.validitems = [];
-            for (var i = 0; i < searchList.items.menu_items.length; i++) {
-                var name = searchList.items.menu_items[i].name;
-                // console.log(name.toLowerCase().indexOf(keyword));
-                console.log(name);
-                if (name.toLowerCase().indexOf(keyword) !== -1) {
-                    // console.log(searchList.items.menu_items[i]);
-                    // return true;
-                    searchList.validitems.push(searchList.items.menu_items[i]);
-                    // console.log(searchList.validitems);
-                }
-            }
-
-            // return false;
-            console.log(searchList.validitems);
         };
+
     };
 
     MenuSearchService.$injector = ['$http'];
 
     function MenuSearchService($http) {
         var service = this;
-        service.getMatchedMenuItems = function () {
-            var response = $http({
+        service.getMatchedMenuItems = function (keyword) {
+            return $http({
                 method: "GET",
                 url: 'https://davids-restaurant.herokuapp.com/menu_items.json'
+            }).then(function (result) {
+                // process result and only keep items that match
+                var allItems = result.data.menu_items;
+                //                return true;
+                keyword = keyword.toLowerCase();
+                var foundItems = [];
+                for (var i = 0; i < allItems.length; i++) {
+                    var name = allItems[i].name;
+                    if (name.toLowerCase().indexOf(keyword) !== -1) {
+                        foundItems.push(allItems[i]);
+                    }
+                }
+                //                return console.log(service);
+                return foundItems;
             });
+        }; //end of getMatchedMenuItems
+    }; //end service
 
-            return response;
-            // response.then (function(){
-            // 	response.data
-            // };)
-        };
-    };
 
 
 })();

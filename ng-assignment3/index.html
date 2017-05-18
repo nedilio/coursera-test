@@ -14,10 +14,10 @@
             <div class="col-sm-12">
                 <h1>Narrow Down Your Chinese Menu Choice</h1>
                 <div class="form-group">
-                    <input type="text" placeholder="search term" class="form-control" ng-model="word">
+                    <input type="text" placeholder="search term" class="form-control" ng-model="searchList.word">
                 </div>
                 <div class="form-group narrow-button">
-                    <button class="btn btn-primary" ng-click="searchList.searchWord(word)">Narrow It Down For Me!</button>
+                    <button class="btn btn-primary" ng-click="searchList.items()">Narrow It Down For Me!</button>
                 </div>
             </div>
         </div>
@@ -40,10 +40,11 @@
                    <th>Price</th>
                </thead>
                <tbody>
-                   <tr ng-repeat="item in searchList.validitems">
+                   <tr ng-repeat="item in searchList.foundItems">
                        <td>{{item.name}}</td>
                        <td>{{item.description}}</td>
                        <td>{{item.price_large | currency}}</td>
+                       <td><button class="btn btn-danger" ng-click="searchList.removeItem">I don't want this</button></td>
                    </tr>
                </tbody>
            </table>
