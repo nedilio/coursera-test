@@ -64,9 +64,14 @@
 //                    if (keyword = "") {
 //                        keyword = undefined
 //                    };
+//                return console.log(keyword);
                     if (keyword !== undefined) {
                         keyword = keyword.toLowerCase();
                     }
+                if(keyword==""){
+                    keyword=undefined;
+                    console.log(keyword);
+                };
                     var foundItems = [];
                     for (var i = 0; i < allItems.length; i++) {
                         //                        var name = allItems[i].name;
