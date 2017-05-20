@@ -13,23 +13,26 @@
         CyclingService.getData()
             .then(function (result) {
                 list.cyclist = result;
-                console.log(list.cyclist);
-//                console.log(list.cyclist.length);
-
+                for (var i = 0; i < list.cyclist.length; i++) {
+                    var etapas = list.cyclist[i].accumulated_times.length;
+                    var finalTime = list.cyclist[i].accumulated_times[etapas - 1];
+                    list.cyclist[i].total_time = finalTime;
+                };
+                list.dynamicOrderFunction = function () {
+                    return 'ID';
+                };
+                console.log(list.dynamicOrderFunction());
             });
         list.finishers = [];
         list.finishOrder = function () {
-            for (var i =0 ;i< list.cyclist.length;i++) {
-//                console.log("recorriendo loop" + i);
-//                console.log(list.cyclist[i].accumulated_time[list.cyclist[i].accumulated_times.length-1]);
-                if (list.cyclist[i].accumulated_times.length==21){
+            for (var i = 0; i < list.cyclist.length; i++) {
+                if (list.cyclist[i].accumulated_times.length == 21) {
                     list.finishers.push(list.cyclist[i]);
-//                    console.log(list.finishers);
+                    console.log(list.finishers[i]);
                 }
             }
-            console.log(list.finishers);
-            list.cyclist=list.finishers;
-            
+            list.cyclist = list.finishers;
+
         };
 
     };
@@ -41,7 +44,8 @@
         service.getData = function () {
             return $http({
                     method: "GET",
-                    //                    url: 'data/riders_giro.json'
+                    //                                        url: 'data/riders_giro.json'
+                    //                    url: 'data/domenico.json'
                     url: 'data/rider_results2016.json'
                 })
                 .then(function (result) {
